@@ -15,12 +15,12 @@ extension FindToursViewController: FindToursDisplayLogic {
     
     @MainActor
     func proceed(using query: SearchQuery) {
-        fromField.errorMessage = nil
         router?.navigateToSearch(using: query)
     }
     
     @MainActor
     func showDestination(place: Destination) {
+        fromField.errorMessage = nil
         fromField.text = "\(place.name), \(place.countryName)"
     }
 }

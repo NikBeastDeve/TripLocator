@@ -52,7 +52,7 @@ extension TripAPI: TargetType {
         case .checkTours:
             return .requestPlain
         case .getTours:
-            return .requestParameters(parameters: ["limit": 50], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["limit": 10], encoding: URLEncoding.queryString)
         }
     }
 
